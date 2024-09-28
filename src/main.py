@@ -1,17 +1,14 @@
 import sys
-from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QApplication
+from ui.MainWindow import MainWindow
 
 
-class MyWidget(QtWidgets.QWidget):
-    def __init__(self):
-        super().__init__()
+def main():
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
 
 
 if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
-
-    widget = MyWidget()
-    widget.resize(800, 600)
-    widget.show()
-
-    sys.exit(app.exec())
+    main()
