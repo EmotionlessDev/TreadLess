@@ -27,6 +27,7 @@ pyflakes==3.2.0
 PyQt5==5.15.11
 PyQt5-Qt5==5.15.15
 PyQt5_sip==12.15.0
+pyqtdarktheme==0.1.7
 setuptools==75.1.0
 stdlib-list==0.10.0
 typing_extensions==4.12.2
