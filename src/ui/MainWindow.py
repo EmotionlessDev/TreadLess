@@ -1,14 +1,17 @@
 from PyQt5.QtWidgets import QMainWindow, QWidget, QVBoxLayout, QHBoxLayout
 from PyQt5.QtWidgets import QListWidget, QTextEdit, QLineEdit, QPushButton
+from .Userdialog import Userdialog
 
 
 class MainWindow(QMainWindow):
     """
     Main window widget.
     """
+
     def __init__(self):
         super().__init__()
-
+        entry = Userdialog()
+        entry.exec()
         self.setWindowTitle("TreadLess")
         self.setGeometry(100, 100, 800, 600)
 
