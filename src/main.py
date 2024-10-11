@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication
 from ui.MainWindow import MainWindow
 import qdarktheme
+from net.client import Client
 
 
 def main():
@@ -9,6 +10,8 @@ def main():
     qdarktheme.setup_theme()
     window = MainWindow()
     window.show()
+    client = Client()
+    client.sendMessage("zddxdxd")
     sys.exit(app.exec_())
 
 
