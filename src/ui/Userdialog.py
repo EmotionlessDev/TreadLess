@@ -40,7 +40,8 @@ class Userdialog(QDialog):
         self.setLayout(main_layout)
 
         # Подключение к базе данных db.db и создание таблицы users, если она еще не существует
-        self.db = Database("db.db")
+        self.db = Database()
+        self.db.connect("db.db")
         self.initialize_database()
 
     def create_login_tab(self) -> None:

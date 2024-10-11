@@ -5,10 +5,8 @@ from typing import Any, List, Tuple
 class Database:
     """A simple SQLite database handler."""
 
-    def __init__(self, db_name: str) -> None:
+    def __init__(self) -> None:
         """Initialize the database connection."""
-        self.conn = sqlite3.connect(db_name)
-        self.cursor = self.conn.cursor()
 
     def create_table(self, table_name: str, columns: str) -> None:
         """Create a table with the given name and columns."""
@@ -32,3 +30,8 @@ class Database:
         """Close the database connection."""
         self.cursor.close()
         self.conn.close()
+
+    def connect(self, db_name: str) -> None:
+        """Open the database connection."""
+        self.conn = sqlite3.connect(db_name)
+        self.cursor = self.conn.cursor()
