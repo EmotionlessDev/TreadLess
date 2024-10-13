@@ -18,12 +18,7 @@ def load_all_id() -> None:
         user_id[username] = id
 
 
-# "action": "send_msg" or "rcv_msg"
-# "sender": username
-# "msg": message
-
-
-def handle_client(client_socket: socket.SocketType, username: str, address: str):
+def handle_client(client_socket: socket.SocketType, username: str, address: str) -> None:
     print(f"Соединение от {address} установлено для пользователя {username}!")
     try:
         while True:
