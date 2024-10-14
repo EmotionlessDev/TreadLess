@@ -241,5 +241,3 @@ fabric.properties
 
 # Custom here
 src/db.db
-src/.DS_Store
-db.db
